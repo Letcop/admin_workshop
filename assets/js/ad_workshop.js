@@ -138,13 +138,14 @@ function handleModerationProducts() {
 
     editInfoWorkshops.forEach(btn => {
         btn.addEventListener('click', () => {
+            let thisProductList = btn.parentElement.parentElement.parentElement.parentElement.parentElement;
             let productName = btn.parentElement.parentElement.parentElement.parentElement.parentElement.children[1].children[2].children[0];
 
-            let editProductName = adminWorkshopModal.children[0].children[1].children[1].children[1]
-            let editProductPrice = adminWorkshopModal.children[0].children[1].children[2].children[1]
+            let editProductName = adminWorkshopModal.children[0].children[1].children[1].children[1];
+            let editProductPrice = adminWorkshopModal.children[0].children[1].children[2].children[1];
             adminWorkshopModal.style.display = 'flex'; 
             // console.dir(adminWorkshopModal.children[0].children[1].children[2].children[1])
-            console.dir(btn.parentElement.parentElement.parentElement.parentElement.parentElement.children[1].children[2].children[0]);
+            console.dir(btn.parentElement.parentElement.parentElement.parentElement.parentElement);
 
             
 
@@ -153,9 +154,11 @@ function handleModerationProducts() {
             });
 
             removeInfoModal.addEventListener('click', () => {
-                let removeQuestion = prompt('Вы хотите удалить свои товары,  (да/нет)', 'нет');
+                let removeQuestion = prompt('Вы хотите удалить свои товары?  (да/нет)', 'нет');
                 if(removeQuestion == 'да') {
-                    alert('Ваши продукты были удалены')
+                    // alert('Ваши продукты были удалены')
+                    thisProductList.remove();
+                    handleCloseModal();
                 } else {
                 }
 
@@ -164,9 +167,11 @@ function handleModerationProducts() {
     })
 
     
-    closeWorkshopModal.addEventListener('click', () => {
-        adminWorkshopModal.style.display = 'none';      
-    })
+    closeWorkshopModal.addEventListener('click', handleCloseModal);
+
+    function handleCloseModal() {
+      adminWorkshopModal.style.display = 'none';      
+    }
 })();
 
 
