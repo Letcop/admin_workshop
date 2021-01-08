@@ -17,10 +17,23 @@ let closeEditProducts = document.querySelectorAll('.close_edit_product');
 let avatarImgs = document.querySelectorAll('.avatar_img');
 let saveInfoModal = document.getElementById('saveInfoModal');
 let removeInfoModal = document.getElementById('removeInfoModal');
+// Start page shops
+let moderationShops = document.querySelectorAll('.moderation_shop');
+let moderationShopList = document.querySelector('.moderation_shop_list');
+let allShopsList = document.querySelector('.all_shops_list');
+let editShop = document.querySelectorAll('.edit_shop');
+let editShopModal = document.getElementById('editShopModal');
+let saveInfoShopModal = document.getElementById('saveInfoShopModal');
+let blockInfoShopModal = document.getElementById('blockInfoShopModal');
+let closeShopModal = document.getElementById('closeShopModal');
 
 
-moderations.forEach(moderation => {
-    // let i = 1;
+// Start Products page
+
+(function changingPageProducts() {
+
+  // Добавить товар
+  moderations.forEach(moderation => {
     moderation.addEventListener('click', () => {
         let countminus =  moderation.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.previousElementSibling.children[0].children[2].children[0].children[0]
         let countplus = moderation.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.previousElementSibling.children[0].children[1].children[0].children[0]
@@ -43,8 +56,7 @@ moderations.forEach(moderation => {
     })
 });
 
-
-(function changingPageWops() {
+// Сортировка товары
     const products = workshopTitle.firstElementChild;
     const shops = workshopTitle.lastElementChild;
 
@@ -138,28 +150,22 @@ function handleModerationProducts() {
 
     editInfoWorkshops.forEach(btn => {
         btn.addEventListener('click', () => {
-            let thisProductList = btn.parentElement.parentElement.parentElement.parentElement.parentElement;
-            let productName = btn.parentElement.parentElement.parentElement.parentElement.parentElement.children[1].children[2].children[0];
-
-            let editProductName = adminWorkshopModal.children[0].children[1].children[1].children[1];
-            let editProductPrice = adminWorkshopModal.children[0].children[1].children[2].children[1];
             adminWorkshopModal.style.display = 'flex'; 
-            // console.dir(adminWorkshopModal.children[0].children[1].children[2].children[1])
-            console.dir(btn.parentElement.parentElement.parentElement.parentElement.parentElement);
+        let thisProductList = btn.parentElement.parentElement.parentElement.parentElement.parentElement
 
-            
-
+          // Сохранить товар
             saveInfoModal.addEventListener('click', ()=> {
-                productName.innerText = editProductName.value
+              handleCloseModal()
             });
 
+            // Удалить товар
             removeInfoModal.addEventListener('click', () => {
                 let removeQuestion = prompt('Вы хотите удалить свои товары?  (да/нет)', 'нет');
                 if(removeQuestion == 'да') {
-                    // alert('Ваши продукты были удалены')
                     thisProductList.remove();
                     handleCloseModal();
                 } else {
+                  handleCloseModal();
                 }
 
             })
@@ -172,12 +178,8 @@ function handleModerationProducts() {
     function handleCloseModal() {
       adminWorkshopModal.style.display = 'none';      
     }
-})();
 
-
-
-
-// Удалить добавленной картинки
+    // Удалить добавленной картинки
 editProductImgs.forEach((editProductImg) => {
   editProductImg.addEventListener('mouseover', () => {
     editProductImg.parentElement.children[3].style.display = 'flex'
@@ -220,6 +222,87 @@ avatarImgs.forEach((avatarImg) => {
   });
 });
 // ***********************************************
+})();
+
+// End Products page
+
+
+// Start Shops page
+
+(function changingPageShops() {
+  moderationShops.forEach(moderation => {
+    moderation.addEventListener('click', () => {
+      console.dir(moderation.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.previousElementSibling.children[0].children[1].children[0].children[0])
+        let countplus = moderation.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.previousElementSibling.children[0].children[1].children[0].children[0]
+        let mod = moderation.parentElement.parentElement.parentElement.parentElement.parentElement
+        console.dir(moderation.parentElement.parentElement.parentElement.parentElement.parentElement)
+        mod.classList.add('moderation_shop_list');
+        // mod.classList.remove('moderation_list');
+
+        setTimeout(() => {
+            countplus.value = +countplus.value + 1;
+        }, 1600);
+
+
+        moderation.nextElementSibling.style.display = 'inline-block'
+        moderation.style.display = 'none'
+    })
+});
+
+// товар модерации
+
+moderationShopList.addEventListener('click', () => {
+  let allShopList = document.querySelectorAll('.all_shop_list');
+  let moderationShopList = document.querySelectorAll('.moderation_shop_list');
+
+  allShopList.forEach(elem => {
+    elem.style.display = 'none'
+
+  });
+
+  moderationShopList.forEach(elemModeration => {
+    elemModeration.style.display = 'flex'
+
+  })
+});
+
+// Все товары
+
+allShopsList.addEventListener('click', () => {
+  let allShopList = document.querySelectorAll('.all_shop_list');
+  let moderationShopList = document.querySelectorAll('.moderation_shop_list');
+
+  allShopList.forEach(elem => {
+    elem.style.display = 'flex'
+
+  });
+
+  // moderationShopList.forEach(elemModeration => {
+  //   elemModeration.style.display = 'none'
+
+  // })
+});
+
+editShop.forEach(btn => {
+  btn.addEventListener('click', ()=> {
+    editShopModal.style.display = 'flex'
+  })
+});
+closeShopModal.addEventListener('click', () => {
+  editShopModal.style.display = 'none'
+});
+saveInfoShopModal.addEventListener('click', () => {
+  alert("Ваше изменение было сохранено");
+  editShopModal.style.display = 'none'
+});
+})();
+
+// End Shops page
+
+
+
+
+
 
 
 

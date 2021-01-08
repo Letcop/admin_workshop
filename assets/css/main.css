@@ -218,6 +218,17 @@ textarea::-webkit-scrollbar-thumb,
   font-weight: 500;
 }
 
+.admin_workshop .workshop .products_page .products_title .sup_title .btn_product span,
+.admin_workshop .workshop .products_page .products_title .sup_title .btn_shop span,
+.admin_workshop .workshop .products_page .shops_title .sup_title .btn_product span,
+.admin_workshop .workshop .products_page .shops_title .sup_title .btn_shop span,
+.admin_workshop .workshop .shops_page .products_title .sup_title .btn_product span,
+.admin_workshop .workshop .shops_page .products_title .sup_title .btn_shop span,
+.admin_workshop .workshop .shops_page .shops_title .sup_title .btn_product span,
+.admin_workshop .workshop .shops_page .shops_title .sup_title .btn_shop span {
+  color: #ffffff;
+}
+
 .admin_workshop .workshop .products_page .products_title .sup_title .btn_product:not(:last-child),
 .admin_workshop .workshop .products_page .products_title .sup_title .btn_shop:not(:last-child),
 .admin_workshop .workshop .products_page .shops_title .sup_title .btn_product:not(:last-child),
@@ -541,6 +552,123 @@ textarea::-webkit-scrollbar-thumb,
   width: 140px;
 }
 
+.admin_workshop .workshop .shops_page .shop_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.admin_workshop .workshop .shops_page .shop_list .photo_shop {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  border: 2px solid #00cf4d;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.admin_workshop .workshop .shops_page .shop_list .photo_shop img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.admin_workshop .workshop .shops_page .shop_list .infoName_shop {
+  margin-left: 15px;
+  margin-top: 7px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.admin_workshop .workshop .shops_page .shop_list .infoName_shop strong {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.admin_workshop .workshop .shops_page .shop_list .infoName_shop i {
+  margin-left: 5px;
+  color: #00cf4d;
+  font-size: 18px;
+}
+
+.admin_workshop .workshop .shops_page .shop_list .infoName_shop .link {
+  color: #00cf4d;
+}
+
+.admin_workshop .workshop .shops_page .shop_list table {
+  width: 72%;
+  margin-left: auto;
+}
+
+.admin_workshop .workshop .shops_page .shop_list table tbody {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.admin_workshop .workshop .shops_page .shop_list table .table_list {
+  margin-top: 20px;
+}
+
+.admin_workshop .workshop .shops_page .shop_list table .table_list i {
+  font-size: 25px;
+  color: #00cf4d;
+  cursor: pointer;
+}
+
+.admin_workshop .workshop .shops_page .shop_list table .table_list .exposed_shop {
+  display: none;
+}
+
+.admin_workshop .workshop .shops_page .shop_list table tr {
+  width: 100%;
+}
+
+.admin_workshop .workshop .shops_page .shop_list table th,
+.admin_workshop .workshop .shops_page .shop_list table td {
+  width: 160px;
+}
+
+.admin_workshop .workshop .shops_page .shop_list table th {
+  font-size: 14px;
+}
+
+.admin_workshop .workshop .shops_page .shop_list:not(:last-child) {
+  margin-bottom: 35px;
+}
+
 .admin_workshop .workshop .modal_page {
   width: 100%;
   height: 100%;
@@ -824,5 +952,101 @@ textarea::-webkit-scrollbar-thumb,
   -webkit-box-shadow: 0px 0px 13px 2px #ff8fb4;
   box-shadow: 0px 0px 13px 2px #ff8fb4;
   color: #ffffff !important;
+}
+
+.admin_workshop .workshop .shop_modal {
+  display: none;
+}
+
+.admin_workshop .workshop .shop_modal .modal_header {
+  margin-bottom: 30px !important;
+}
+
+.admin_workshop .workshop .shop_modal .user_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.admin_workshop .workshop .shop_modal .user_info .logo {
+  width: 84px;
+  height: 85px;
+  border-radius: 50%;
+  border: 2px solid #00cf4d;
+  position: relative;
+  margin-right: 20px;
+}
+
+.admin_workshop .workshop .shop_modal .user_info .logo img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.admin_workshop .workshop .shop_modal .user_info .name input {
+  text-transform: uppercase;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  color: #253556;
+}
+
+.admin_workshop .workshop .shop_modal .user_info input::-webkit-input-placeholder {
+  text-transform: capitalize;
+}
+
+.admin_workshop .workshop .shop_modal .user_info input:-ms-input-placeholder {
+  text-transform: capitalize;
+}
+
+.admin_workshop .workshop .shop_modal .user_info input::-ms-input-placeholder {
+  text-transform: capitalize;
+}
+
+.admin_workshop .workshop .shop_modal .user_info input::placeholder {
+  text-transform: capitalize;
+}
+
+.admin_workshop .workshop .shop_modal .user_info .creator {
+  margin: 5px 0;
+}
+
+.admin_workshop .workshop .shop_modal .user_info .creator span {
+  font-weight: 500;
+}
+
+.admin_workshop .workshop .shop_modal .user_info .creator a {
+  text-transform: lowercase;
+  font-size: 14px;
+}
+
+.admin_workshop .workshop .shop_modal .user_info .created_time span {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.admin_workshop .workshop .shop_modal .info_status span {
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+.admin_workshop .workshop .shop_modal .info_status .status_shop {
+  margin: 20px 0 5px 0;
+}
+
+.admin_workshop .workshop .shop_modal .info_status .general_sales {
+  margin: 5px 0;
+}
+
+.admin_workshop .workshop .shop_modal .buttons button {
+  margin-top: 20px;
+  width: 300px !important;
 }
 /*# sourceMappingURL=main.css.map */
