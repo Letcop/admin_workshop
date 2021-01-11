@@ -1,3 +1,6 @@
+let chat = document.querySelector('.chat i');
+let chatText = document.querySelector('.chat_text');
+const showChat = document.querySelector('.workshop_body');
 let workshopTitle = document.querySelector('.workshop_title');
 let productsPage = document.querySelector('.products_page .sup_title');
 let supTitle = document.querySelector('.sup_title');
@@ -19,7 +22,7 @@ let saveInfoModal = document.getElementById('saveInfoModal');
 let removeInfoModal = document.getElementById('removeInfoModal');
 // Start page shops
 let moderationShops = document.querySelectorAll('.moderation_shop');
-let moderationShopList = document.querySelector('.moderation_shop_list');
+let moderationShopListBtn = document.querySelector('.moderation_shop_list_btn');
 let allShopsList = document.querySelector('.all_shops_list');
 let editShop = document.querySelectorAll('.edit_shop');
 let editShopModal = document.getElementById('editShopModal');
@@ -27,6 +30,24 @@ let saveInfoShopModal = document.getElementById('saveInfoShopModal');
 let blockInfoShopModal = document.getElementById('blockInfoShopModal');
 let closeShopModal = document.getElementById('closeShopModal');
 
+
+// start chat
+showChat.addEventListener('click', () => {
+  chatText.style.visibility = 'hidden'
+});
+
+let click;
+chat.addEventListener('click', () => {
+  if(click == 0) {
+  chatText.style.visibility = 'hidden'
+  return click = 1;
+  }
+  else {
+  chatText.style.visibility = 'visible'
+  return click = 0;
+  }
+});
+// End chat
 
 // Start Products page
 
@@ -240,7 +261,7 @@ avatarImgs.forEach((avatarImg) => {
         // mod.classList.remove('moderation_list');
 
         setTimeout(() => {
-            countplus.value = +countplus.value + 1;
+            countplus.value = +countplus.value - 1;
         }, 1600);
 
 
@@ -251,17 +272,17 @@ avatarImgs.forEach((avatarImg) => {
 
 // товар модерации
 
-moderationShopList.addEventListener('click', () => {
+moderationShopListBtn.addEventListener('click', () => {
   let allShopList = document.querySelectorAll('.all_shop_list');
   let moderationShopList = document.querySelectorAll('.moderation_shop_list');
 
   allShopList.forEach(elem => {
-    elem.style.display = 'none'
+    elem.style.display = 'flex'
 
   });
 
   moderationShopList.forEach(elemModeration => {
-    elemModeration.style.display = 'flex'
+    elemModeration.style.display = 'none'
 
   })
 });
@@ -299,6 +320,14 @@ saveInfoShopModal.addEventListener('click', () => {
 
 // End Shops page
 
+
+const abs = function() {
+  abs.count = 1
+
+  console.log(abs.count)
+}
+
+abs()
 
 
 

@@ -21,28 +21,3 @@ $(document).ready(function() {
         })
     })
 });
-
-// Start shop count
-
-$(document).ready(function() {
-    $('.moderation_shop').click(function() {
-        var img = this.parentElement.parentElement.parentElement.parentElement.parentElement.children[0].children[0]
-        $(img).clone().css({
-            'position': 'absolute',
-            'z-index': '100',
-            'width': '80',
-            'height': '80',
-            'border-radius': '50px',
-            'left': $(img).offset()['left'],
-            'top': $(img).offset()['top'],
-        }).appendTo('.sup_title').animate({
-            top: $('.shops_count').offset()['top'],
-            left: $('.shops_count').offset()['left'],
-            opasity: 0,
-            width: 30,
-            height: 30
-        }, 1000, function() {
-            $(this).remove();
-        })
-    })
-});
