@@ -366,7 +366,7 @@ textarea::-webkit-scrollbar-thumb,
           margin-top: 20px;
           display: flex;
           color: $accent-color-light;
-          .category,
+          .category .category_item,
           .by_name {
             padding: 0 15px;
             height: 30px;
@@ -374,11 +374,46 @@ textarea::-webkit-scrollbar-thumb,
             border: 2px solid $divider-color-text;
             @include d-center();
             font-weight: 500;
+            font-size: 14px;
             i {
               margin-top: 13px;
               margin-left: 5px;
-              font-size: 30px;
+              font-size: 25px;
               color: $accent-color;
+            }
+          }
+          .category .category_item {
+            position: relative;
+            cursor: pointer;
+          }
+          .category_list {
+            width: 156px;
+            border-radius: 10px;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+            background-color: $primary-color-text;
+            border: 2px solid $divider-color-text;
+            border-top: none;
+            position: absolute;
+            z-index: 1;
+            display: none;
+            li {
+              list-style: none;
+              height: 30px;
+              padding-left: 10px;
+              display: flex;
+              align-items: center;
+              a {
+                text-decoration: none;
+                color: $accent-color;
+                font-weight: 500;
+                text-transform: capitalize;
+              }
+            }
+            li:hover {
+              background-color: $primary-color;
+            }
+            li:hover a {color: $primary-color-text;
             }
           }
           .search {
@@ -614,6 +649,7 @@ textarea::-webkit-scrollbar-thumb,
       @include d-center();
       display: none;
       padding: 10px;
+      z-index: 999;
       .modal_title {
         width: 500px;
         height: auto;
@@ -676,22 +712,58 @@ textarea::-webkit-scrollbar-thumb,
             font-weight: 500;
           }
           .category {
-            display: inline-block;
-            border: 1px solid $divider-color-text;
-            border-radius: 10px;
-            width: 40%;
-            height: 30px;
-            padding: 0 10px;
-            font-weight: 500;
-            background-color: $primary-color-text;
-            @include d-space();
-            
-            i {
-              margin-left: 5px;
-              // margin-top: 5px;
-              font-size: 22px;
-              // padding-top: 5px;
+            position: relative;
+            .category_item {
+              display: inline-block;
+              border: 1px solid $divider-color-text;
+              border-radius: 10px;
+              width: 40%;
+              height: 30px;
+              padding: 0 10px;
+              font-weight: 500;
+              background-color: $primary-color-text;
+              @include d-space();
+              cursor: pointer;
+              
+              i {
+                margin-left: 5px;
+                // margin-top: 5px;
+                font-size: 22px;
+                // padding-top: 5px;
+              }
+
             }
+            
+          .category_list {
+            width: 168px;
+            border-radius: 10px;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+            background-color: $primary-color-text;
+            border: 1px solid $divider-color-text;
+            border-top: none;
+            position: absolute;
+            z-index: 1;
+            display: none;
+            li {
+              list-style: none;
+              height: 30px;
+              padding-left: 10px;
+              display: flex;
+              align-items: center;
+              a {
+                text-decoration: none;
+                color: $accent-color;
+                font-weight: 500;
+                text-transform: capitalize;
+              }
+            }
+            li:hover {
+              background-color: $primary-color;
+            }
+            li:hover a {color: $primary-color-text;
+            }
+          }
           }
           .exposed_date {
             margin: 10px 0;
@@ -875,4 +947,8 @@ textarea::-webkit-scrollbar-thumb,
     }
   }
   
+  .category_added_list {
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+  }
 }

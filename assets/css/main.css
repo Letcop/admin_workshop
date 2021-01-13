@@ -502,21 +502,21 @@ textarea::-webkit-scrollbar-thumb,
   color: #12114a;
 }
 
-.admin_workshop .workshop .products_page .products_title .sub_title .category,
+.admin_workshop .workshop .products_page .products_title .sub_title .category .category_item,
 .admin_workshop .workshop .products_page .products_title .sub_title .by_name,
-.admin_workshop .workshop .products_page .products_title .sup_title_shop .category,
+.admin_workshop .workshop .products_page .products_title .sup_title_shop .category .category_item,
 .admin_workshop .workshop .products_page .products_title .sup_title_shop .by_name,
-.admin_workshop .workshop .products_page .shops_title .sub_title .category,
+.admin_workshop .workshop .products_page .shops_title .sub_title .category .category_item,
 .admin_workshop .workshop .products_page .shops_title .sub_title .by_name,
-.admin_workshop .workshop .products_page .shops_title .sup_title_shop .category,
+.admin_workshop .workshop .products_page .shops_title .sup_title_shop .category .category_item,
 .admin_workshop .workshop .products_page .shops_title .sup_title_shop .by_name,
-.admin_workshop .workshop .shops_page .products_title .sub_title .category,
+.admin_workshop .workshop .shops_page .products_title .sub_title .category .category_item,
 .admin_workshop .workshop .shops_page .products_title .sub_title .by_name,
-.admin_workshop .workshop .shops_page .products_title .sup_title_shop .category,
+.admin_workshop .workshop .shops_page .products_title .sup_title_shop .category .category_item,
 .admin_workshop .workshop .shops_page .products_title .sup_title_shop .by_name,
-.admin_workshop .workshop .shops_page .shops_title .sub_title .category,
+.admin_workshop .workshop .shops_page .shops_title .sub_title .category .category_item,
 .admin_workshop .workshop .shops_page .shops_title .sub_title .by_name,
-.admin_workshop .workshop .shops_page .shops_title .sup_title_shop .category,
+.admin_workshop .workshop .shops_page .shops_title .sup_title_shop .category .category_item,
 .admin_workshop .workshop .shops_page .shops_title .sup_title_shop .by_name {
   padding: 0 15px;
   height: 30px;
@@ -532,28 +532,116 @@ textarea::-webkit-scrollbar-thumb,
       -ms-flex-align: center;
           align-items: center;
   font-weight: 500;
+  font-size: 14px;
 }
 
-.admin_workshop .workshop .products_page .products_title .sub_title .category i,
+.admin_workshop .workshop .products_page .products_title .sub_title .category .category_item i,
 .admin_workshop .workshop .products_page .products_title .sub_title .by_name i,
-.admin_workshop .workshop .products_page .products_title .sup_title_shop .category i,
+.admin_workshop .workshop .products_page .products_title .sup_title_shop .category .category_item i,
 .admin_workshop .workshop .products_page .products_title .sup_title_shop .by_name i,
-.admin_workshop .workshop .products_page .shops_title .sub_title .category i,
+.admin_workshop .workshop .products_page .shops_title .sub_title .category .category_item i,
 .admin_workshop .workshop .products_page .shops_title .sub_title .by_name i,
-.admin_workshop .workshop .products_page .shops_title .sup_title_shop .category i,
+.admin_workshop .workshop .products_page .shops_title .sup_title_shop .category .category_item i,
 .admin_workshop .workshop .products_page .shops_title .sup_title_shop .by_name i,
-.admin_workshop .workshop .shops_page .products_title .sub_title .category i,
+.admin_workshop .workshop .shops_page .products_title .sub_title .category .category_item i,
 .admin_workshop .workshop .shops_page .products_title .sub_title .by_name i,
-.admin_workshop .workshop .shops_page .products_title .sup_title_shop .category i,
+.admin_workshop .workshop .shops_page .products_title .sup_title_shop .category .category_item i,
 .admin_workshop .workshop .shops_page .products_title .sup_title_shop .by_name i,
-.admin_workshop .workshop .shops_page .shops_title .sub_title .category i,
+.admin_workshop .workshop .shops_page .shops_title .sub_title .category .category_item i,
 .admin_workshop .workshop .shops_page .shops_title .sub_title .by_name i,
-.admin_workshop .workshop .shops_page .shops_title .sup_title_shop .category i,
+.admin_workshop .workshop .shops_page .shops_title .sup_title_shop .category .category_item i,
 .admin_workshop .workshop .shops_page .shops_title .sup_title_shop .by_name i {
   margin-top: 13px;
   margin-left: 5px;
-  font-size: 30px;
+  font-size: 25px;
   color: #253556;
+}
+
+.admin_workshop .workshop .products_page .products_title .sub_title .category .category_item,
+.admin_workshop .workshop .products_page .products_title .sup_title_shop .category .category_item,
+.admin_workshop .workshop .products_page .shops_title .sub_title .category .category_item,
+.admin_workshop .workshop .products_page .shops_title .sup_title_shop .category .category_item,
+.admin_workshop .workshop .shops_page .products_title .sub_title .category .category_item,
+.admin_workshop .workshop .shops_page .products_title .sup_title_shop .category .category_item,
+.admin_workshop .workshop .shops_page .shops_title .sub_title .category .category_item,
+.admin_workshop .workshop .shops_page .shops_title .sup_title_shop .category .category_item {
+  position: relative;
+  cursor: pointer;
+}
+
+.admin_workshop .workshop .products_page .products_title .sub_title .category_list,
+.admin_workshop .workshop .products_page .products_title .sup_title_shop .category_list,
+.admin_workshop .workshop .products_page .shops_title .sub_title .category_list,
+.admin_workshop .workshop .products_page .shops_title .sup_title_shop .category_list,
+.admin_workshop .workshop .shops_page .products_title .sub_title .category_list,
+.admin_workshop .workshop .shops_page .products_title .sup_title_shop .category_list,
+.admin_workshop .workshop .shops_page .shops_title .sub_title .category_list,
+.admin_workshop .workshop .shops_page .shops_title .sup_title_shop .category_list {
+  width: 156px;
+  border-radius: 10px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  background-color: #ffffff;
+  border: 2px solid #c1c4ca;
+  border-top: none;
+  position: absolute;
+  z-index: 1;
+  display: none;
+}
+
+.admin_workshop .workshop .products_page .products_title .sub_title .category_list li,
+.admin_workshop .workshop .products_page .products_title .sup_title_shop .category_list li,
+.admin_workshop .workshop .products_page .shops_title .sub_title .category_list li,
+.admin_workshop .workshop .products_page .shops_title .sup_title_shop .category_list li,
+.admin_workshop .workshop .shops_page .products_title .sub_title .category_list li,
+.admin_workshop .workshop .shops_page .products_title .sup_title_shop .category_list li,
+.admin_workshop .workshop .shops_page .shops_title .sub_title .category_list li,
+.admin_workshop .workshop .shops_page .shops_title .sup_title_shop .category_list li {
+  list-style: none;
+  height: 30px;
+  padding-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.admin_workshop .workshop .products_page .products_title .sub_title .category_list li a,
+.admin_workshop .workshop .products_page .products_title .sup_title_shop .category_list li a,
+.admin_workshop .workshop .products_page .shops_title .sub_title .category_list li a,
+.admin_workshop .workshop .products_page .shops_title .sup_title_shop .category_list li a,
+.admin_workshop .workshop .shops_page .products_title .sub_title .category_list li a,
+.admin_workshop .workshop .shops_page .products_title .sup_title_shop .category_list li a,
+.admin_workshop .workshop .shops_page .shops_title .sub_title .category_list li a,
+.admin_workshop .workshop .shops_page .shops_title .sup_title_shop .category_list li a {
+  text-decoration: none;
+  color: #253556;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.admin_workshop .workshop .products_page .products_title .sub_title .category_list li:hover,
+.admin_workshop .workshop .products_page .products_title .sup_title_shop .category_list li:hover,
+.admin_workshop .workshop .products_page .shops_title .sub_title .category_list li:hover,
+.admin_workshop .workshop .products_page .shops_title .sup_title_shop .category_list li:hover,
+.admin_workshop .workshop .shops_page .products_title .sub_title .category_list li:hover,
+.admin_workshop .workshop .shops_page .products_title .sup_title_shop .category_list li:hover,
+.admin_workshop .workshop .shops_page .shops_title .sub_title .category_list li:hover,
+.admin_workshop .workshop .shops_page .shops_title .sup_title_shop .category_list li:hover {
+  background-color: #00cf4d;
+}
+
+.admin_workshop .workshop .products_page .products_title .sub_title .category_list li:hover a,
+.admin_workshop .workshop .products_page .products_title .sup_title_shop .category_list li:hover a,
+.admin_workshop .workshop .products_page .shops_title .sub_title .category_list li:hover a,
+.admin_workshop .workshop .products_page .shops_title .sup_title_shop .category_list li:hover a,
+.admin_workshop .workshop .shops_page .products_title .sub_title .category_list li:hover a,
+.admin_workshop .workshop .shops_page .products_title .sup_title_shop .category_list li:hover a,
+.admin_workshop .workshop .shops_page .shops_title .sub_title .category_list li:hover a,
+.admin_workshop .workshop .shops_page .shops_title .sup_title_shop .category_list li:hover a {
+  color: #ffffff;
 }
 
 .admin_workshop .workshop .products_page .products_title .sub_title .search,
@@ -938,6 +1026,7 @@ textarea::-webkit-scrollbar-thumb,
           align-items: center;
   display: none;
   padding: 10px;
+  z-index: 999;
 }
 
 .admin_workshop .workshop .modal_page .modal_title {
@@ -1025,6 +1114,10 @@ textarea::-webkit-scrollbar-thumb,
 }
 
 .admin_workshop .workshop .modal_page .modal_title .modal_body .category {
+  position: relative;
+}
+
+.admin_workshop .workshop .modal_page .modal_title .modal_body .category .category_item {
   display: inline-block;
   border: 1px solid #c1c4ca;
   border-radius: 10px;
@@ -1042,11 +1135,52 @@ textarea::-webkit-scrollbar-thumb,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 
-.admin_workshop .workshop .modal_page .modal_title .modal_body .category i {
+.admin_workshop .workshop .modal_page .modal_title .modal_body .category .category_item i {
   margin-left: 5px;
   font-size: 22px;
+}
+
+.admin_workshop .workshop .modal_page .modal_title .modal_body .category .category_list {
+  width: 168px;
+  border-radius: 10px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  background-color: #ffffff;
+  border: 1px solid #c1c4ca;
+  border-top: none;
+  position: absolute;
+  z-index: 1;
+  display: none;
+}
+
+.admin_workshop .workshop .modal_page .modal_title .modal_body .category .category_list li {
+  list-style: none;
+  height: 30px;
+  padding-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.admin_workshop .workshop .modal_page .modal_title .modal_body .category .category_list li a {
+  text-decoration: none;
+  color: #253556;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.admin_workshop .workshop .modal_page .modal_title .modal_body .category .category_list li:hover {
+  background-color: #00cf4d;
+}
+
+.admin_workshop .workshop .modal_page .modal_title .modal_body .category .category_list li:hover a {
+  color: #ffffff;
 }
 
 .admin_workshop .workshop .modal_page .modal_title .modal_body .exposed_date {
@@ -1295,5 +1429,10 @@ textarea::-webkit-scrollbar-thumb,
 .admin_workshop .workshop .shop_modal .buttons button {
   margin-top: 20px;
   width: 300px !important;
+}
+
+.admin_workshop .category_added_list {
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
 }
 /*# sourceMappingURL=main.css.map */

@@ -20,6 +20,7 @@ let closeEditProducts = document.querySelectorAll('.close_edit_product');
 let avatarImgs = document.querySelectorAll('.avatar_img');
 let saveInfoModal = document.getElementById('saveInfoModal');
 let removeInfoModal = document.getElementById('removeInfoModal');
+let categoryItem = document.querySelectorAll('.category .category_item')
 // Start page shops
 let moderationShops = document.querySelectorAll('.moderation_shop');
 let moderationShopListBtn = document.querySelector('.moderation_shop_list_btn');
@@ -76,6 +77,23 @@ chat.addEventListener('click', () => {
         moderation.style.display = 'none'
     })
 });
+
+let clickNum;
+categoryItem.forEach(elem => {
+  elem.addEventListener('click', () => {
+    if(clickNum == 0) {
+      elem.classList.remove('category_added_list'),
+      elem.nextElementSibling.style.display = 'none'
+      return clickNum =1;
+    } else {
+      elem.classList.add('category_added_list');
+      elem.nextElementSibling.style.display = 'block'
+      return clickNum = 0;
+    }
+    
+  })
+})
+
 
 // Сортировка товары
     const products = workshopTitle.firstElementChild;
